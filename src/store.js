@@ -71,7 +71,29 @@ const contactsSlice = createSlice({
                 "img" : images.sandra,
                 "title": "UI/UX",
                 "id": "6"
-            }
+            },
+            {
+                "name" : "john-smith",
+                "address" : "Riviera State 32/106",
+                "job" : "Twitter, Inc.",
+                "location": "795 Folsom Ave, Suite 600",
+                "city": "San Francisco, CA 94107",
+                "phone": "(123) 456-7890",
+                "img" : images.john,
+                "title": "CEO",
+                "id": "7"
+            },
+            {
+                "name" : "alex jonathan",
+                "address" : "Riviera State 32/106",
+                "job" : "Twitter, Inc.",
+                "location": "795 Folsom Ave, Suite 600",
+                "city": "San Francisco, CA 94107",
+                "phone": "(123) 456-7890",
+                "img" : images.alex,
+                "title": "Graphic Desinger",
+                "id": "8"
+           },
         ],
         selectedContact: null,
     },
