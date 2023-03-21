@@ -25,3 +25,10 @@
         width: 99%;
     }
 }
+
+@media only screen and (max-width: 900px) {
+    .ContactsMainScreen {
+        grid-template-columns: repeat(2, 50%);
+        width: 93%;
+    }
+}
