@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install`
+
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -15,7 +17,7 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ### Developer Notes
-- I haven't focused on syling the app snice it's mostly time consuming
+- I haven't focused on styling the app snice it's mostly time consuming
 - the google API key was expired so I used a work-around in the code
 - Folder structure is missing due to size of project, could be added 
 

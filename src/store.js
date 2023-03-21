@@ -99,12 +99,9 @@ const contactsSlice = createSlice({
     },
     reducers: {
         deleteContact: (state, action) => {
-            console.log("deleteContact", action.payload, state);
             state.contacts = state.contacts.filter(p => p.id !== action.payload.id);
         },
         saveContact: (state, action) => {
-            console.log("Store saveContact action.payload", action.payload);
-            console.log("Store saveContact state.contacts", state.contacts);
             if (action.payload.id) {
                 const contactIdx = state.contacts.findIndex(p => p.id == action.payload.id);
                 state.contacts[contactIdx] = action.payload;
