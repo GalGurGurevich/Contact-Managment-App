@@ -1,17 +1,17 @@
 import './Card.css';
-import Images from './images/profile-pics'
 import { useSelector, useDispatch } from 'react-redux';
 import { setSelectedContact, deleteContact } from './store'
-import BasicModal from './Modal'
 import { useEffect } from 'react';
+import DeleteIcon from '@mui/icons-material/Delete';
+import IconButton from '@mui/material/IconButton';
+import CreateIcon from '@mui/icons-material/Create';
+
 
 function Card({contact}) {
 
   let { img, name, address, job, location, city, phone, title, id } = contact;
 
   const dispatch = useDispatch();
-
-  img = img ? img : Images.monica
 
   return (
     <div className="card" id={id}>
@@ -28,9 +28,12 @@ function Card({contact}) {
             <span className="user_phone">{phone}</span>
         </div>
         <div className="user_actions">
-            <button id="edit_btn" onClick={() => dispatch(setSelectedContact(contact))}>Edit</button>
-            <div>&nbsp;</div>
-            <button id="del_btn" onClick={() => dispatch(deleteContact(contact))}>Del</button>
+            <IconButton aria-label="delete">
+                <DeleteIcon onClick={() => dispatch(deleteContact(contact))}/>
+            </IconButton>
+            <IconButton aria-label="edit">
+                <CreateIcon onClick={() => dispatch(setSelectedContact(contact))}/>
+            </IconButton>
         </div>
     </div>
   );

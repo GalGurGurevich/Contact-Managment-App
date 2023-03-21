@@ -12,7 +12,7 @@ const contactsSlice = createSlice({
                 "job" : "Twitter, Inc.",
                 "location": "795 Folsom Ave, Suite 600",
                 "city": "San Francisco, CA 94107",
-                "phone": "P: (123) 456-7890",
+                "phone": "(123) 456-7890",
                 "img" : images.alex,
                 "title": "Graphic Desinger",
                 "id": "1"
@@ -23,7 +23,7 @@ const contactsSlice = createSlice({
                 "job" : "Twitter, Inc.",
                 "location": "795 Folsom Ave, Suite 600",
                 "city": "San Francisco, CA 94107",
-                "phone": "P: (123) 456-7890",
+                "phone": "(123) 456-7890",
                 "img" : images.janeth,
                 "title": "CTO",
                 "id": "2"
@@ -34,7 +34,7 @@ const contactsSlice = createSlice({
                 "job" : "Twitter, Inc.",
                 "location": "795 Folsom Ave, Suite 600",
                 "city": "San Francisco, CA 94107",
-                "phone": "P: (123) 456-7890",
+                "phone": "(123) 456-7890",
                 "img" : images.john,
                 "title": "CEO",
                 "id": "3"
@@ -45,7 +45,7 @@ const contactsSlice = createSlice({
                 "job" : "Twitter, Inc.",
                 "location": "795 Folsom Ave, Suite 600",
                 "city": "San Francisco, CA 94107",
-                "phone": "P: (123) 456-7890",
+                "phone": "(123) 456-7890",
                 "img" : images.michael,
                 "title": "Sales Manager",
                 "id": "4"
@@ -56,7 +56,7 @@ const contactsSlice = createSlice({
                 "job" : "Twitter, Inc.",
                 "location": "795 Folsom Ave, Suite 600",
                 "city": "San Francisco, CA 94107",
-                "phone": "P: (123) 456-7890",
+                "phone": "(123) 456-7890",
                 "img" : images.monica,
                 "title": "Marketing Manager",
                 "id": "5"
@@ -67,7 +67,7 @@ const contactsSlice = createSlice({
                 "job" : "Twitter, Inc.",
                 "location": "795 Folsom Ave, Suite 600",
                 "city": "San Francisco, CA 94107",
-                "phone": "P: (123) 456-7890",
+                "phone": "(123) 456-7890",
                 "img" : images.sandra,
                 "title": "UI/UX",
                 "id": "6"

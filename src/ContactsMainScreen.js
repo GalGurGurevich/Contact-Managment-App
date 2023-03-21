@@ -10,8 +10,6 @@ function ContactsMainScreen() {
   const contacts = useSelector(state => state.contacts);
   const selected = useSelector(state => state.selectedContact);
 
-  console.log("contacts", contacts);
-
   function drawCards() {
     return (contacts || []).map(function(contact, idx) {
       return (<Card key={idx} contact={contact}></Card>)

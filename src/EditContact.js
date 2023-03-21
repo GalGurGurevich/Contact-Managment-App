@@ -4,7 +4,7 @@ import { saveContact, setSelectedContact } from './store'
 import './EditContact.css'
 
 export default function EditContact({ contact }) {
-    console.log("EditContact", contact);
+    
     const [name, setName] = useState(contact?.name || "");
     const [address, setAddress] = useState(contact?.address || "")
     const [phone, setPhone] = useState(contact?.phone || "");
@@ -14,7 +14,7 @@ export default function EditContact({ contact }) {
     useEffect(() => {
         setName(contact?.name || "")
         setAddress(contact?.address || "")
-        setPhone(contact?.phone || 0)
+        setPhone(contact?.phone || "")
         setTitle(contact?.title || "")
     },[contact])
 
@@ -41,7 +41,7 @@ export default function EditContact({ contact }) {
     function resetState() {
         setName("")
         setAddress("")
-        setPhone(0)
+        setPhone("")
         dispatch(setSelectedContact(null))
     }
 
@@ -50,7 +50,6 @@ export default function EditContact({ contact }) {
 
         if(!num) return false;
         if (regexPattern.test(num)) {
-            console.log("The input string is valid.");
             return true
         } else {
             console.log("The input string is not valid.");
