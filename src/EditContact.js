@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { saveContact, setSelectedContact } from './store'
 import Alert from '@mui/material/Alert';
@@ -12,13 +12,6 @@ export default function EditContact({ contact }) {
     const [title, setTitle] = useState(contact?.title || "");
     const [alertError, setAlertError] = useState(false);
     const dispatch = useDispatch();
-
-    useEffect(() => {
-        setName(contact?.name || "")
-        setAddress(contact?.address || "")
-        setPhone(contact?.phone || "")
-        setTitle(contact?.title || "")
-    },[contact])
 
     function addContact() {
         if(!validatePhone(phone)) {
