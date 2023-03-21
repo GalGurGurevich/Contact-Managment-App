@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { saveContact, setSelectedContact } from './store'
+import Alert from '@mui/material/Alert';
 import './EditContact.css'
 
 export default function EditContact({ contact }) {
-    
+
     const [name, setName] = useState(contact?.name || "");
     const [address, setAddress] = useState(contact?.address || "")
     const [phone, setPhone] = useState(contact?.phone || "");
     const [title, setTitle] = useState(contact?.title || "");
+    const [alertError, setAlertError] = useState(false);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -20,6 +22,7 @@ export default function EditContact({ contact }) {
 
     function addContact() {
         if(!validatePhone(phone)) {
+            setAlertError(true);
             return;
         }
 
@@ -42,6 +45,7 @@ export default function EditContact({ contact }) {
         setName("")
         setAddress("")
         setPhone("")
+        setAlertError(false);
         dispatch(setSelectedContact(null))
     }
 
@@ -76,6 +80,7 @@ export default function EditContact({ contact }) {
                 <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)}/>
             </div>
             <button onClick={() => addContact()}>SAVE</button>
+            {alertError && <Alert severity="error">Mobile must be numbers only, no spaces, no characters</Alert>}
         </div>
     )
 }
