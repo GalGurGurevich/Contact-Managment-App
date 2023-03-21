@@ -1,0 +1,41 @@
+.card {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    background: #998235;
+}
+
+
+
+.profile_img_box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile_img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.user_data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.user_actions {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 96%;
+    }
+}

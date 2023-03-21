@@ -1,0 +1,27 @@
+.ContactsMainScreen {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-gap: 40px;
+    margin: 10px;
+    height: 100vh;
+    width: 94%;
+}
+
+.add_contact {
+    top: 0;
+    position: sticky;
+    width: 100%;
+    height: 24px;
+    text-align: center;
+    border: solid 1px black;
+    cursor: pointer;
+    background: gray;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .ContactsMainScreen {
+        grid-template-columns: repeat(1, 100%);
+        width: 99%;
+    }
+}

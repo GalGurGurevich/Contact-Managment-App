@@ -1,0 +1,22 @@
+.edit-product-container {
+    display: flex;
+    flex-direction: column
+}
+
+.edit-product-container button {
+    width: 100px;
+    align-self: flex-end;
+}
+
+.edit-product-input-field {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.edit-product-container label {
+    margin-right: 5px;
+}
+
+.edit-product-container input {
+    width: 100%;
+}
