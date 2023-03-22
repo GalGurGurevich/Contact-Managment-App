@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { saveContact, setSelectedContact } from './store'
+import { saveContact, setSelectedContact } from '../redux/store'
 import Alert from '@mui/material/Alert';
+import { validatePhone } from '../utils/helperFunctions'
 import './EditContact.css'
 
 export default function EditContact({ contact }) {
@@ -42,17 +43,6 @@ export default function EditContact({ contact }) {
         dispatch(setSelectedContact(null))
     }
 
-    function validatePhone(num) {
-        const regexPattern = /^[\d()+]*$/; // number, (), +
-
-        if(!num) return false;
-        if (regexPattern.test(num)) {
-            return true
-        } else {
-            console.log("The input string is not valid.");
-            return false;
-        }
-    }
 
     return (
         <div className="edit-contact-container">

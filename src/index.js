@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import ContactsMainScreen from './ContactsMainScreen';
-import { store } from './store';
+import ContactsMainScreen from './pages/ContactsMainScreen';
+import { store } from './redux/store';
 import { Provider } from 'react-redux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

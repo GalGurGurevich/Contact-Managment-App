@@ -1,6 +1,6 @@
 import './Card.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { setSelectedContact, deleteContact } from './store'
+import { setSelectedContact, deleteContact } from '../redux/store'
 import { useEffect, useState } from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';

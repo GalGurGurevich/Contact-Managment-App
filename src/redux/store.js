@@ -1,6 +1,6 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 import { v4 as uuidv4 } from 'uuid';
-import images from './images/profile-pics'
+import images from '../images/profile-pics'
 
 const contactsSlice = createSlice({
     name: 'contacts',

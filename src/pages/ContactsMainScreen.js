@@ -1,8 +1,8 @@
 import './ContactsMainScreen.css';
-import Card from './Card'
+import Card from '../components/Card'
 import { useSelector, useDispatch } from 'react-redux';
-import { setSelectedContact } from './store'
-import BasicModal from './Modal' 
+import { setSelectedContact } from '../redux/store'
+import BasicModal from '../components/Modal' 
 
 function ContactsMainScreen() {
 

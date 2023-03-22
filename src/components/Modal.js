@@ -1,9 +1,9 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import EditContact from "./EditContact";
+import EditContact from "../components/EditContact";
 import { useSelector, useDispatch } from 'react-redux';
-import { setSelectedContact } from './store'
+import { setSelectedContact } from '../redux/store'
 
 const style = {
   position: "absolute",
