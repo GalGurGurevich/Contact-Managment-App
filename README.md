@@ -19,6 +19,5 @@ You may also see any lint errors in the console.
 ### Developer Notes
 - I haven't focused on styling the app snice it's mostly time consuming
 - the google API key was expired so I used a work-around in the code
-- Folder structure is missing due to size of project, could be added 
 
 
