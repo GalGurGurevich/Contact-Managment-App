@@ -11,14 +11,10 @@ export default function EditContact({ contact }) {
     const [address, setAddress] = useState(contact?.address || "")
     const [phone, setPhone] = useState(contact?.phone || "");
     const [title, setTitle] = useState(contact?.title || "");
-    const [alertError, setAlertError] = useState(false);
     const dispatch = useDispatch();
+    const enableSave = (phone && validatePhone(phone));
 
     function addContact() {
-        if(!validatePhone(phone)) {
-            setAlertError(true);
-            return;
-        }
 
         dispatch(saveContact({
             id: contact?.id || null,
@@ -55,8 +51,8 @@ export default function EditContact({ contact }) {
                 <label>phone:</label>
                 <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)}/>
             </div>
-            <button onClick={() => addContact()}>SAVE</button>
-            {alertError && <Alert severity="error">Mobile must be numbers only, no spaces, no characters</Alert>}
+            <button onClick={() => addContact()} disabled={!enableSave}>SAVE</button>
+            {!enableSave && <Alert severity="error">Mobile must be numbers only, no spaces, no characters</Alert>}
         </div>
     )
 }
