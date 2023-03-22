@@ -21,15 +21,11 @@ export default function BasicModal() {
   const selected = useSelector(state => state.selectedContact);
   const dispatch = useDispatch();
 
-  const handleClose = () => {
-    dispatch(setSelectedContact(null))
-  }
-
   return (
     <div>
       <Modal
         open={selected}
-        onClose={handleClose}
+        onClose={() => dispatch(setSelectedContact(null))}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
