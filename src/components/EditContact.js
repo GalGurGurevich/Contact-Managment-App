@@ -32,16 +32,9 @@ export default function EditContact({ contact }) {
             location: contact.location
         }))
         
-        resetState();
-    }
-
-    function resetState() {
-        setName("")
-        setAddress("")
-        setPhone("")
-        setAlertError(false);
         dispatch(setSelectedContact(null))
     }
+
 
 
     return (
